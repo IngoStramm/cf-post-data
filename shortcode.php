@@ -28,7 +28,6 @@ function cfpd_post_data($atts)
     switch ($return) {
         case 'image':
             $src = get_the_post_thumbnail_url($post_id, 'full');
-            // return '<img src=' . $src . ' class="cf-post-data-image" />';
             return $src;
             break;
 

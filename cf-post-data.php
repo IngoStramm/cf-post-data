@@ -26,6 +26,7 @@ require_once 'tgm/tgm.php';
 require_once 'classes/classes.php';
 require_once 'scripts.php';
 require_once 'shortcode.php';
+require_once 'settings.php';
 
 require 'plugin-update-checker-4.10/plugin-update-checker.php';
 $updateChecker = Puc_v4_Factory::buildUpdateChecker(
