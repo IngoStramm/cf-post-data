@@ -4,7 +4,7 @@
  * Plugin Name: Converte Fácil Post Data
  * Plugin URI: https://agencialaf.com
  * Description: Descrição do Converte Fácil Post Data.
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: Ingo Stramm
  * Text Domain: cf-post-data
  * License: GPLv2
