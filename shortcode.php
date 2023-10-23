@@ -49,6 +49,10 @@ function cfpd_post_data($atts)
             return wp_date('h:m', strtotime($post->post_date));
             break;
 
+        case 'author':
+            return $post->post_author;
+            break;
+
         default:
             return $post->post_title;
             break;
