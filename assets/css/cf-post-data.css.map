@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "cf-post-data.css",
+	"sources": [
+		"../sass/cf-post-data.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
