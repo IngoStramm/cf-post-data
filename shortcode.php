@@ -50,7 +50,8 @@ function cfpd_post_data($atts)
             break;
 
         case 'author':
-            return $post->post_author;
+            $author_id = $post->post_author;
+            return get_the_author_meta('display_name', $author_id);
             break;
 
         default:

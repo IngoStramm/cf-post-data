@@ -1,7 +1,7 @@
 {
     "name": "Converte Fácil Post Data",
-    "version": "0.0.2",
-    "download_url": "https://github.com/IngoStramm/cf-post-data/raw/master/dist/cf-post-data.zip",
+    "version": "0.0.3",
+    "download_url": "https://github.com/IngoStramm/cf-post-data/raw/main/dist/cf-post-data.zip",
     "homepage": "https://agencialaf.com",
     "requires": "4.7",
     "tested": "5.5",
