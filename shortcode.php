@@ -22,6 +22,9 @@ function cfpd_post_data($atts)
     ];
 
     $posts = get_posts($args);
+    if (!$posts) {
+        return;
+    }
     $post = $posts[0];
     $post_id = $post->ID;
 
