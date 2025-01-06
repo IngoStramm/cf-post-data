@@ -62,7 +62,8 @@ function cfpd_post_data($atts)
             break;
 
         case 'excerpt':
-            $output = $post->post_excerpt;
+            $excerpt = $post->post_excerpt;
+            $output = cfpd_limit_string_by_word_count($excerpt, 9);
             break;
 
         default:
