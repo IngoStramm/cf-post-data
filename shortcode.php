@@ -28,37 +28,47 @@ function cfpd_post_data($atts)
     $post = $posts[0];
     $post_id = $post->ID;
 
+    $output = '';
     switch ($return) {
         case 'image':
             $src = get_the_post_thumbnail_url($post_id, 'full');
-            return $src;
+            $output = $src;
             break;
 
         case 'url':
-            return get_permalink($post_id);
+            $output = get_permalink($post_id);
             break;
 
         case 'cat':
             $terms = wp_get_post_terms($post_id, 'category', ['fields' => 'names']);
-            return $terms[0];
+            $output = $terms[0];
             break;
 
         case 'data':
-            return wp_date('F d, Y', strtotime($post->post_date));
+            $output = wp_date('F d, Y', strtotime($post->post_date));
             break;
 
         case 'hora':
-            return wp_date('h:m', strtotime($post->post_date));
+            $output = wp_date('h:m', strtotime($post->post_date));
             break;
 
         case 'author':
             $author_id = $post->post_author;
-            return get_the_author_meta('display_name', $author_id);
+            $output = get_the_author_meta('display_name', $author_id);
+            break;
+
+        case 'content':
+            $output = apply_filters('the_content', $post->post_content);
+            break;
+
+        case 'excerpt':
+            $output = $post->post_excerpt;
             break;
 
         default:
-            return $post->post_title;
+            $output = $post->post_title;
             break;
     }
+    return $output;
 }
 add_shortcode('cf-post-data', 'cfpd_post_data');
